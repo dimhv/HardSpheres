@@ -1,0 +1,16 @@
+1000
+0.005
+10000
+2000
+0.688
+0.3
+0
+
+N
+rate_bac
+t_check
+p_max
+pc_fr_max
+B_accept
+P0_label (0==> p sample, 1==> any hight pressure value)
+
