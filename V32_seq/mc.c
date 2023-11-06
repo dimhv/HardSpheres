@@ -643,6 +643,9 @@ void MC(int thread_id, Sample* samples, Seed* seeds){
         accept_ratio /= (double)N;
         samples[II].A += (accept_ratio - 0.3)*samples[II].A;
 
+        if(samples[II].A > 0.5*L)
+            samples[II].A = 0.5*L;
+        
         samples[II].accept_mov = accept_ratio;
 
         delta_V = samples[II].B*( 2.*xor64(&seeds[thread_id]) - 1. );
