@@ -22,7 +22,7 @@ static int L2 = 100;
 static double beta = 1.;
 static double k = 5.25;
 
-double mesh_fac = 3.33333333333333333333333333333; //open for adjustment
+double mesh_fac = 2.; //open for adjustment
 int t_PT = 400;
 
 static int t_max = (int)1e8;
@@ -87,7 +87,7 @@ int main(int argc, char** argv) {
     fscanf(fin0,"%d\n", &t_check);
     fscanf(fin0,"%lf\n", &p_max);
     fscanf(fin0,"%lf\n", &pc_fr_max);
-    fscanf(fin0,"%lf\n", &B_accept);
+    fscanf(fin0,"%lf\n", &acept_Vbac);
     fscanf(fin0,"%lf\n", &P0_label);
     fscanf(fin0,"%d\n", &input_index);
 
@@ -96,7 +96,6 @@ int main(int argc, char** argv) {
     L_mesh = L/mesh_fac;
     L2_mesh = L_mesh*L_mesh;
     cell_num = L2_mesh*L_mesh;
-
 
 //######################################################################################
 //loop counters//#######################################################################
@@ -240,7 +239,7 @@ srand( seed_bac );
 
     printf("t_check = %1.1g, rate = %g\n", (double)t_check, samples[0].rate);
     printf("t_max = %1.1g, p_max = %g, pc_fr_max = %g\n", (double)t_max, p_max, pc_fr_max);
-    printf("A = %.2g, B = %.2g, B_accept = %.2g\n", samples[0].A, samples[0].B, B_accept);
+    printf("A = %.2g, B = %.2g, acept_Vbac = %.2g\n", samples[0].A, samples[0].B, acept_Vbac);
     printf("#############################\n\n");
 
 
@@ -267,6 +266,8 @@ srand( seed_bac );
 
     ii=1;
     while(samples[0].p_measured < p_max && samples[0].V_hs/samples[0].V < pc_fr_max && ii < t_max){
+
+//         printf("\n%d\n", ii);
 
         printScrollingValue_2(samples[0].p_measured, p_max, samples[0].V_hs/samples[0].V, pc_fr_max, (double)ii, (double)t_max, samples[0].B, samples[0].accept_V, samples[0].P);
 
