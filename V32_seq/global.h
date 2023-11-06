@@ -7,16 +7,13 @@ int L_mesh, L2_mesh, cell_num;
 
 double P0, Pf; //input
 
+int num_threads; //input
+int num_cores; //input
+
 int t_check; //input
 int tobs; //input
 
 double acept_Vbac;
-
-double p_max;
-double pc_fr_max;
-double B_accept;
-
-int input_index;
 
 //######################################################################################
 //Structure definition//###############################################################
@@ -77,11 +74,6 @@ typedef struct {
     double x0_com;
     double y0_com;
     double z0_com;
-
-    double rate;
-
-    double p_measured;
-    double V_bac;
 
     double COM0;
     double COM;
