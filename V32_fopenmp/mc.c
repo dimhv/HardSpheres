@@ -541,7 +541,7 @@ int legal_configuration_dyn(int thread_id, Sample* samples, Seed* seeds){
 
 void MC(int thread_id, Sample* samples, Seed* seeds){
 
-    int ii,jj;
+    int ii;
     double accept_ratio, accept_ratio_Vol, delta_V, delta_H, bac_double;
 
     accept_ratio_Vol = 0.;
