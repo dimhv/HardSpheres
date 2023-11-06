@@ -554,8 +554,8 @@ void MC(int thread_id, Sample* samples, Seed* seeds){
 
         samples[II].A = fabs(samples[II].A);
 
-//         while(samples[II].A >= 0.5*L)
-//             samples[II].A = 0.5*L;
+        if(samples[II].A > 0.5*L)
+            samples[II].A = 0.5*L;
 
         accept_ratio /= (double)N;
         samples[II].accept_mov = accept_ratio;
