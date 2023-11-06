@@ -116,7 +116,7 @@ int main(int argc, char** argv) {
     for (ii = 0; ii < num_threads; ii++) {
 
 //         sprintf(file_name,"par_xyz.dat");
-        sprintf(file_name,"./input/par_00_%.2d.dat",input_index);
+        sprintf(file_name,"./input/par_%.5d_000_000.dat",input_index);
 
         fin[ii] = fopen(file_name, "r");
         fscanf(fin[ii],"%lf\n", &ampF_0);
@@ -144,7 +144,7 @@ int main(int argc, char** argv) {
         }
 
 //         sprintf(file_name,"xyz.dat");
-        sprintf(file_name,"./input/c_00_%.2d.dat",input_index);
+        sprintf(file_name,"./input/c_%.5d_000_000.dat",input_index);
 
         fin2[ii] = fopen(file_name, "r");
         for (jj = 0; jj < N; jj++)
