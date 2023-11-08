@@ -219,7 +219,7 @@ srand( seed_bac );
     }
 
     bac_double /= (double)trlx;
-    P0 = bac_double*(double)N/samples[0].V;
+    P0 = bac_double*samples[0].V/(double)N;
 
     if(P0_label==0)
         samples[0].P = P0;
