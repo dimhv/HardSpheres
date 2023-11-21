@@ -1,3 +1,3 @@
 #!/bin/sh
 
-gcc 3d_hs_seq_main.c -lm -o 3d_hs_seq_main
+gcc -std=c99  -Ofast 3d_hs_seq_main.c -lm -o 3d_hs_seq_main
