@@ -180,7 +180,10 @@ srand( seed_bac );
             samples[ii].particles[jj].z = samples[ii].particles[jj].z0;
         }
 
-
+    for (ii = 0; ii < num_threads; ii++)
+        for (jj = 0; jj < cell_num; jj++)
+            samples[ii].cell_ind[jj] = 0;
+    
     for (kk = 0; kk < num_threads; kk++)
         for(ii=0; ii < N; ii++){
 
