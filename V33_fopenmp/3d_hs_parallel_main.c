@@ -195,7 +195,10 @@ long int bac_seed =  (int)time(NULL);
             samples[ii].particles[jj].z_pbc = samples[ii].particles[jj].z0_pbc;
 
         }
-
+    
+    for (ii = 0; ii < num_threads; ii++)
+        for (jj = 0; jj < cell_num; jj++)
+            samples[ii].cell_ind[jj] = 0;
 
     for (kk = 0; kk < num_threads; kk++)
         for(ii=0; ii < N; ii++){
