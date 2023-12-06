@@ -554,12 +554,12 @@ void MC(int thread_id, Sample* samples, Seed* seeds){
 
         accept_ratio /= (double)N;
         samples[II].accept_mov = accept_ratio;
-
-        if(acept_Xbac > 0){
-            samples[II].A += (accept_ratio - acept_Xbac)*samples[II].A;
-            if(samples[II].A > 0.5*L)
-                samples[II].A = 0.5*L;
-        }
+        
+//        if(acept_Xbac > 0){
+//            samples[II].A += (accept_ratio - acept_Xbac)*samples[II].A;
+//            if(samples[II].A > 0.5*L)
+//                samples[II].A = 0.5*L;
+//        }
 
 //         samples[II].A += (accept_ratio - acept_Xbac)*samples[II].A;
 //         if(samples[II].A > 0.5*L)
