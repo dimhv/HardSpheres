@@ -1,0 +1,16 @@
+1000
+64
+16
+50
+30000
+0
+0.1
+
+
+N
+num_threads (samples)
+num_cores (computer cores)
+t_check
+tobs
+tw
+acept_Vbac

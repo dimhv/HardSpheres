@@ -1,0 +1,10 @@
+# //Hard Sphere System, Monte Carlo
+# //L.H.Miranda-Filho., ITP-CAS, lucmiranda@gmail.com, 2023
+# //**************************************************************************
+
+(PARALLEL TEMPERING)
+
+-Input file contains compressed samples (Diferent files mean independent initial conditions)
+-Each file has 6 diferent compression under the same initial conditions (REPLICAS)
+
+-exe.py generates compression via PT
