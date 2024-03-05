@@ -1,0 +1,26 @@
+200
+10
+100
+128
+16
+0.786464
+0.786464
+
+tobs
+t_check
+t_rlx
+num_threads
+num_cores
+beta0
+betaf
+
+Results obtained from
+beta = [1.17597 , 0.899638, 0.786464, 0.700672, 0.607045]
+index = [27, 22, 19, 16, 12, 8, 4]
+
+N = 12x12x12, M = 128
+
+*Simulation Details,
+exchanges performed every 10 mcs; parallel tempering acceptance ration evaluated every 400 mcs
+
+critical temperature T_c \approx 1.14 (Beta_c = 0.88)

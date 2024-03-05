@@ -1,0 +1,15 @@
+200
+10
+100
+32
+8
+0
+0
+
+tobs
+t_check //this is fixed for PT
+t_rlx
+num_threads //this is fixed for PT
+num_cores
+beta0
+betaf
